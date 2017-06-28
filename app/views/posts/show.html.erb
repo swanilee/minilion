@@ -1,0 +1,21 @@
+<h1><%=@post.id%> 번 포스트입니다.</h1>
+<h2>제목 :<%=@post.title%> </h2><br>
+<h2>내용 :<%=@post.content%> </h2><br>
+<hr>
+<h4>[댓글]</h4>
+<h4>
+<form method='post' action='/posts/show/<%=@post.id%>/comments/create'>
+        <input type='text' name='input_comment'> 
+        <input type='submit'> 
+    </form>
+    <br>
+    
+ <%=@comments. each do |comment| %>
+ <p>-><%=@comment.content%></p>
+    <% end %>
+    
+    
+</h4>
+<h3><a href="/posts/index">[목록으로 되돌아가기]</a></h3>
+<h3><a href="/posts/edit/<%=@post.id%>">[수정하기]</a></h3>
+<h3><a href="/posts/destroy/<%=@post.id%>" data-confirm="정말 삭제하시겠어요?ㅇ.ㅇ">삭제하기!</a></h3>

@@ -1,0 +1,8 @@
+<h1><%=@post.id%>번 포스트를 수정할 화면입니다.</h1>
+<p>수정할 내용을 입력해주시면 됩니당:)</p>
+<form action="/posts/update/<%=@post.id%>" method="get">
+ <p>제목: <input type="text" name="input_title" value="<%=@post.title%>"></p>
+ <p>내용: <input type="text" name="input_content" value="<%=@post.content%>"></p>
+ <input type="submit" vale="수정하기!">
+</form>
+<a href="/posts/index">다시 질문들 보러가기</a>

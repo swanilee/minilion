@@ -5,10 +5,40 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-</head>
-<body>
+  <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
+
+ <ul class="nav nav-tabs navbar-inverse">
+  <li role="presentation" class="active"><a href="https://candoitalone-cloned-relation-swanilee.c9users.io/">Home</a></li>
+  <li role="presentation"><a href="https://candoitalone-cloned-relation-swanilee.c9users.io/posts/index">Memo</a></li>
+  <li role="presentation"><a href="https://candoitalone-cloned-relation-swanilee.c9users.io/posts/new">Write</a></li>
+  <li role="presentation"><a href="https://candoitalone-cloned-relation-swanilee.c9users.io/posts/cal">Calender</a></li>
+</ul>
+
+
+
+</head>
+
+<style>
+body{
+    margin-bottom: 40px;
+	 	margin-top: 0px;
+	 	text-align: center;
+	 	font-size: 14px;
+	 	font-family: 'Roboto', sans-serif;
+		background:url(http://www.digiphotohub.com/wp-content/uploads/2015/09/bigstock-Abstract-Blurred-Background-Of-92820527.jpg);
+}
+</style>
+
+<body style="background-color:#cce6ff;">
+  
+ 
+<br>
 <%= yield %>
+
 
 </body>
 </html>

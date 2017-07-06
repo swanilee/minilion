@@ -40,10 +40,18 @@ class PostsController < ApplicationController
   
   
   def create
-  @post = Post.new
-  @post.title =params[:input_title]
-  @post.content =params[:input_content]
-  @post.save
-  redirect_to '/posts/confirm'
+    @post = Post.new
+    @post.title =params[:input_title]
+    @post.content =params[:input_content]
+  
+    uploader = NayanaUploader.new
+    uploader.store!(params[:photo])                              # size: 1024x768
+    #uploader.url # => '/url/to/my_file.png'               # size: 800x800
+    @post.img_url = uploader.url 
+  
+    @post.save
+    redirect_to '/posts/confirm'
+
+  
   end
 end

@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   
   get 'posts/confirm'
 
+  get '/posts/cal' => 'posts#cal'
+  
   get '/posts/new' => 'posts#new'
 
   get '/posts/create' => 'posts#create'
@@ -29,6 +31,8 @@ Rails.application.routes.draw do
   post '/posts/show/:post_id/comments/create' => 'comments#create'
   get '/posts/show/:post_id/comments/create' => 'comments#create'
   
+  post '/posts/show/:post_id/comments/destroy/:comment_id' => 'comments#destroy'
+  get '/posts/show/:post_id/comments/destroy/:comment_id' => 'comments#destroy'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

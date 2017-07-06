@@ -1,5 +1,9 @@
-<h1>지금까지 쓰여진 질문들입니다!</h1>
-<h2><a href="/posts/new">[새글을 쓰러갑시다!]</a></h2>
+<h1>지금까지 쓰여진 메모들입니다!</h1>
+<hr>
+
 <% @posts. each do |post| %>
 <a href="/posts/show/<%=post.id %>"> <%=post.id %> : <%=post.title %> </a> <br>
 <% end %>
+
+<hr>
+  <h4><a href="/posts/new">[새메모를 쓰러바로가기]</a></h4>
